@@ -3,7 +3,9 @@ body    {
 }
 
 .hero   {
-    height: 100vh;    display: flex;
+    height: 100vh; 
+    width: 100vw;
+    display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -24,6 +26,7 @@ body    {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1rem;
 }
 
 .hero-content *   {
@@ -34,8 +37,11 @@ h1 {
     /* font-size: 64px; */
     font-weight: bold;
   max-width: 964px;
+  
 
 }
+
+
 
 p {
     font-size: "Rounded Mplus 1c";
@@ -43,7 +49,7 @@ p {
     /* font-size: 24px; */
     max-width: 408px;
 }
-.hero .btn-cta  {
+.hero .btn  {
     padding: 0.5em 2em;
     border-radius: 10em;
     background-color: #88c960;
@@ -53,4 +59,33 @@ p {
     font-weight: bold;
     font-family: Quicksand, sans-serif;
     text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 4em;
+    }
+    p {
+        font-size: 1.5em;
+        max-width: 600px;
+    }
+
+    .hero .btn  {
+        font-size: 1.2em;
+    }
+}
+
+form {
+    position:relative;
+}
+form div {
+    position:absolute;
+    top:0;
+    left:-100vw;
+    width:100%;
+    overflow:hidden;
+    transition:all 1s ease-in;
+}
+form div.active {
+    left:0;
 }
