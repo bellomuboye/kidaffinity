@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Kid's Affinity</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -23,6 +23,14 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
 
     <script
@@ -31,43 +39,82 @@
     ></script>
   </head>
   <body>
-    <div class="hero hero-bg">
-      <div class="hero-content container">
-        <h1>
-          Our app helps you discover your <br /><span>Kid's Affinity</span>
-        </h1>
-        <p>
-          Find out what your child loves from an early age and groom them in it
-        </p>
-        <form class="d-flex" id="notify-form">
-          <button class="btn btn-cta">Get Notified</button>
-          <div class="form-div">
-            <input
-              class="form-control"
-              type="text"
-              placeholder="Enter e-mail"
-            />
-            <button class="form-control btn btn-submit" type="submit">
-              Submit!
-            </button>
-          </div>
-        </form>
+    <main id="main">
+      <div class="hero hero-bg" data-action="hero">
+        <div class="hero-content container" data-action="hero-background">
+          <h1>
+            Our app helps you discover your <br /><span>Kid's Affinity</span>
+          </h1>
+          <p>
+            Find out what your child loves from an early age and groom them in
+            it
+          </p>
+          <form class="d-flex" id="notify-form">
+            <button class="btn btn-cta">Get Notified</button>
+          </form>
+        </div>
       </div>
-    </div>
-    <script>
-      const btnCta = document.querySelector(".btn-cta");
-      const formDiv = document.querySelector(".form-div");
-      const btnSubmit = document.querySelector(".btn-submit")
-      btnCta.addEventListener("click", function(e) {
-        e.preventDefault();
-        formDiv.classList.add("active");
-      });
-      btnSubmit.addEventListener("click", function(e) {
-        e.preventDefault();
-        formDiv.classList.remove("active");
-        btnCta.textContent = "E-mail Sent";
-      })
-    </script>
+      <div class="content-wrapper">
+        <section class="how-it-works">
+          <div
+            class="container py-5 d-flex flex-column justify-content-center align-items-center"
+          >
+            <h2 class="mb-4">How KidAffinity works</h2>
+            <div class="row no-gutters mx-md-n2">
+              <div class="col-md-6 px-md-2 py-2">
+                <div class="content">
+                  <p>
+                    KidAffinity has an extensive database of psychologically
+                    verified audio-visual and physical cues and stimuli. These
+                    images, videos, sounds and feelings are displayed to your
+                    child through your device’s screen, speakers and haptic
+                    touch technology.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6 px-md-2 py-2">
+                <div class="content">
+                  <p>
+                    Every young child has intrinsic and hormonal reactions to
+                    certain stimuli and cues that excite them. KidAffinity was
+                    built particularly with this in mind, using the highest
+                    standards of computing technology.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6 px-md-2 py-2">
+                <div class="content">
+                  <p>
+                    KidAffinity has an extensive database of psychologically
+                    verified audio-visual and physical cues and stimuli. These
+                    images, videos, sounds and feelings are displayed to your
+                    child through your device’s screen, speakers and haptic
+                    touch technology.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6 px-md-2 py-2">
+                <div class="content">
+                  <p>
+                    KidAffinity has an extensive database of psychologically
+                    verified audio-visual and physical cues and stimuli. These
+                    images, videos, sounds and feelings are displayed to your
+                    child through your device’s screen, speakers and haptic
+                    touch technology.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="glide.min.js"></script>
 
     <script src="/home/definebell/Downloads/Web Development/Bootstrap-installation/cdnfiles/jquery-3.4.1.slim.min.js"></script>
 
