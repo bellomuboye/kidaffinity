@@ -1,16 +1,18 @@
 // All Custom JS
     // @package asb
 
-'use strict';
+// 'use strict';
 
 // Selector shortening helpers
-function $(selector) { return document.querySelector(selector); };
-function $$(selector) { return Array.from(document.querySelectorAll(selector)); };
+
 
 
 
 // Zoom out hero effect
     function maineffect() {
+        function $(selector) { return document.querySelector(selector); };
+        function $$(selector) { return Array.from(document.querySelectorAll(selector)); };
+
         'use strict';
     
         var
@@ -24,7 +26,6 @@ function $$(selector) { return Array.from(document.querySelectorAll(selector)); 
         hero.style.zIndex = 2;
         triggerAnimation();
         window.addEventListener('resize', triggerAnimation, false);
-    
         function triggerAnimation() {
             window.addEventListener('scroll', function () {
                 (window.scrollY > heroHeight) ? hero.style.zIndex = 0 : hero.style.zIndex = 2;
@@ -45,3 +46,42 @@ function $$(selector) { return Array.from(document.querySelectorAll(selector)); 
         }
     };
     maineffect();
+
+    function changebg () {
+        $(window)
+        .scroll(function () {
+          // selectors
+          var $window = $(window),
+            $bodyWrapper = $(".body-wrapper"),
+            $panel = $(".panel");
+
+          // Change 33% earlier than scroll position so colour is there when you arrive.
+          var scroll = $window.scrollTop() + $window.height() / 3;
+
+          $panel.each(function () {
+            var $this = $(this);
+
+
+            // if position is within range of this panel.
+            // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
+            // Remember we set the scroll to 33% earlier in scroll var.
+            if (
+              $(this).position().top <= scroll &&
+              $(this).position().top + $this.height() < scroll
+            ) {
+              // Remove all classes on body with color-
+              $bodyWrapper.removeClass(function (index, css) {
+                return (css.match(/(^|\s)color-\S+/g) || []).join(" ");
+              });
+
+              // Add class of currently active div
+              $bodyWrapper.addClass("color-" + $(this).data("color"));
+            }
+          });
+        })
+        .scroll();
+    };
+
+    changebg();
+
+
