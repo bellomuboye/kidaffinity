@@ -9,13 +9,14 @@
 
 
 // Zoom out hero effect
-    function maineffect() {
+    function zoomHero() {
         function $(selector) { return document.querySelector(selector); };
         function $$(selector) { return Array.from(document.querySelectorAll(selector)); };
 
         'use strict';
     
         var
+            footer = $('.footer'),
             hero            = $('[data-action="hero"]'),
             heroHeight      = hero.getBoundingClientRect().height,
             heroBg          = $('[data-action="hero-background"]'),
@@ -40,19 +41,24 @@
             
             if (window.scrollY < heroBgHeight) {
                 hero.style.transform      = `scale(${scaleValue}) translateZ(0)`;
+                // hero.style.transform      = `scale(${scaleValue}) translateY((-100 * ${scaleValue}px)`;
                 heroBg.style.opacity      = 1 - (scrollPercentage * opacitySpeed);
-                // heroContent.style.opacity = 1 - (scrollPercentage * opacitySpeed);
-            }
-        }
+            };
+            if (scaleValue < 0.5) {
+              footer.style.display = "flex";
+            } else {footer.style.display = "none"}
+        };
+
+        
     };
-    maineffect();
+    zoomHero();
 
     function changebg () {
         $(window)
         .scroll(function () {
           // selectors
           var $window = $(window),
-            $bodyWrapper = $(".body-wrapper"),
+            $bgChangeCont = $(".bg-change"),
             $panel = $(".panel");
 
           // Change 33% earlier than scroll position so colour is there when you arrive.
@@ -70,12 +76,12 @@
               $(this).position().top + $this.height() < scroll
             ) {
               // Remove all classes on body with color-
-              $bodyWrapper.removeClass(function (index, css) {
+              $bgChangeCont.removeClass(function (index, css) {
                 return (css.match(/(^|\s)color-\S+/g) || []).join(" ");
               });
 
               // Add class of currently active div
-              $bodyWrapper.addClass("color-" + $(this).data("color"));
+              $bgChangeCont.addClass("color-" + $(this).data("color"));
             }
           });
         })
@@ -83,5 +89,3 @@
     };
 
     changebg();
-
-
