@@ -62,7 +62,6 @@ p {
   color: #24272f;
   font-size: 18px;
   line-height: 27px;
-  color: #24272f;
 }
 
 .hero p {
@@ -75,10 +74,11 @@ p {
   background-color: #88c960;
   box-shadow: 0px 12px 11px rgba(0, 0, 0, 0.25);
   border-radius: 49px;
-  /* font-size: 18px; */
   font-weight: bold;
   font-family: Quicksand, sans-serif;
   text-transform: uppercase;
+  border: none;
+  outline: none;
 }
 
 @media (min-width: 992px) {
@@ -178,10 +178,7 @@ h2 {
   font-weight: 900;
 }
 
-p {
-  color: #24272f;
-  font-size: 18px;
-}
+
 
 .how-it-works .content {
   background: #ffffff;
@@ -238,5 +235,33 @@ p {
   bottom: 0;
   width: 100%;
   height: 100vh;
-  background-color: red;
+  background-color: #333a4f;
+}
+
+.footer h2, .footer p {
+ color: #f6fbff
+}
+
+.email-box {
+  padding: 0.5em 2em;
+    border-radius: 10em;
+    background-color: transparent;
+
+    font-weight: bold;
+    font-family: Quicksand, sans-serif;
+
+    border: 1.5px solid #f6fbff;
+    outline: none;
+    width: 70%;
+    max-width: 354px;
+}
+
+.footer .btn-cta {
+  background-color: #f6fbff;
+  color: #333a4f;
+}
+
+ .footer * + * {
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
 }

@@ -283,27 +283,35 @@
       </div>
     </main>
     <div class="footer-cover"></div>
-    <footer class="footer d-flex-and-center"><h1>hh</h1>
-<form method="post">
+    <footer class="footer d-flex-and-center">
+      <div class="container">
+        <h2>Get notified</h2>
+      <P>Are you sold on the idea of KidAffinity and would like to be notified when we launch it?</P>
+      <p>Enter your email in the field below and we'll be in touch :)</p>
+<form method="post" class=" notify-form d-flex-and-center flex-column">
 
 			<input type="email" name="useremail" placeholder="Your E-mail please" class="email-box" maxlength="60" id="email_data">
 			<span class="email-message" id="form_response"></span>
-			<button class="submit-button" type="button" id="email_submit">Send</button>
+			<button class="submit-button btn-cta" type="button" id="email_submit">Get Notified</button>
 		</form>
+      </div>
+      
 </footer>
 
     <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+
 <script type="text/javascript">
 	
 $(document).ready(function (){
 
 	$("#email_submit").click(function (){
-
 		var $email_data_var;
 		$email_data_var = $("#email_data").val();
 		if($email_data_var == ''){
-			$("#email_msg").html("Please Enter a Email Address");
+			$("#form_response").html("Please Enter a Email Address");
 		}
 		else{
 
@@ -323,9 +331,9 @@ $(document).ready(function (){
 	});
 
 });
-
 </script>
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
+
+    <!-- <script src="js/jquery-3.4.1.slim.min.js"></script> -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
