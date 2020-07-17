@@ -209,8 +209,8 @@ h2 {
 }
 
 .what-you-get img {
-  width: 100%;
-}
+  max-width: 100%;
+  max-height: 100vh;}
 
 .what-you-get .text {
   flex-direction: column;
