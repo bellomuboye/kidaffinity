@@ -57,7 +57,7 @@ h1 {
 }
 
 p {
-  font-family: 'Rounded Mplus 1c';
+  font-family: 'M PLUS Rounded 1c';
   font-weight: normal;
   color: #24272f;
   font-size: 18px;
@@ -198,7 +198,6 @@ p {
 /* panel styles */
 .panel {
   min-height: 100vh;
-  outline: 10px solid red;
 }
 
 .color-pink {
@@ -210,6 +209,20 @@ p {
 
 .color-green {
   background-color: #e1f4ea;
+}
+
+.what-you-get img {
+  width: 100%;
+}
+
+.what-you-get .text {
+  flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.what-you-get .text .heading {
+  font-weight: bolder;
 }
 
 .footer-cover {
