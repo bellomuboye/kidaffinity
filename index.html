@@ -26,6 +26,10 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 
     <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -41,7 +45,7 @@
             <h1>
               Our app helps you discover your <br /><span>Kid Affinity</span>
             </h1>
-            <lottie-player src="step_-_-_interact_and_analyze.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop  autoplay></lottie-player>
+            <!-- <lottie-player src="step_1_-_display.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop  autoplay></lottie-player> -->
 
             <p>
               Find out what your child loves from an early age and groom them in
@@ -87,7 +91,7 @@
             class="container py-5 d-flex flex-column justify-content-center align-items-center"
           >
             <h2 class="mb-4">How KidAffinity works</h2>
-            <div class="row no-gutters mx-md-n2">
+            <div class="row no-gutters mx-md-n2" data-aos="flip-right">
               <div class="col-md-6 px-md-2 py-2">
                 <div class="content">
                   <p>
@@ -333,8 +337,12 @@ $(document).ready(function (){
 
 });
 </script>
+<script>
+  AOS.init({
+  duration: 1200,
+})
+</script>
 
-    <!-- <script src="js/jquery-3.4.1.slim.min.js"></script> -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
