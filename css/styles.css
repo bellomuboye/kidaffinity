@@ -261,6 +261,10 @@ h2 {
   color: #333a4f;
 }
 
+#form_response {
+  text-decoration: underline;
+}
+
  .footer * + * {
   margin-bottom: 1.5em;
   margin-top: 1.5em;
