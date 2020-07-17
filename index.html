@@ -11,10 +11,7 @@
       crossorigin="anonymous"
     />
 
-    <link
-      rel="stylesheet"
-      href="/home/definebell/Downloads/Web Development/Bootstrap-installation/cdnfiles/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link
       rel="stylesheet"
       href="/home/definebell/Downloads/Web Development/Bootstrap-installation/cdnfiles/font-awesome.min.css"
@@ -31,8 +28,8 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="carousel.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <script
       defer=""
@@ -142,22 +139,36 @@
           </div>
         </section>
         <div class="bg-change">
-          <section class="panel" data-color="pink">
+          <section class="panel what-you-get" data-color="pink">
             <div class="container d-flex-and-center">
-              <h2>Pink panel</h2>
+              <div class="row no-gutters mx-md-n2">
+                <div class="img col-md-6 px-md-2 py-2">
+                <img src="images/phone.png" alt="" />
+              </div>
+              <div class="text col-md-6 px-md-2 py-2">
+                <h2>You’ll get:</h2>
+                <p>
+                  Affinity check Lastly, KidAffinity provides you with a report
+                  of your child’s performance. There’s no good or bad
+                  performance. Just what has been determined to get your child
+                  excited. KidAffinity also provides you with IQ scores and
+                  age-appropriate learning materials.
+                </p>
+              </div>
+              </div>
+              
             </div>
           </section>
-          <section class="panel" data-color="blue">
+          <section class="panel what you-get" data-color="blue">
             <div class="container d-flex-and-center">
               <h2>Blue panel</h2>
             </div>
           </section>
-          <section class="panel" data-color="green">
+          <section class="panel what-you-get" data-color="green">
             <div class="container d-flex-and-center">
               <h2>Green panel</h2>
             </div>
           </section>
-       
         </div>
         <section class="phone screen">
           <div class="container d-flex-and-center">
@@ -171,58 +182,44 @@
                   class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active"
                 >
                   <img
-                    src="1.jpg"
+                    src="images/app-screen.png"
                     class="img-fluid mx-auto d-block"
                     alt="img1"
                   />
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
                   <img
-                    src="2.jpg"
+                    src="images/app-screen.png"
                     class="img-fluid mx-auto d-block"
                     alt="img2"
                   />
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
                   <img
-                    src="3.jpg"
+                    src="images/app-screen.png"
                     class="img-fluid mx-auto d-block"
                     alt="img3"
                   />
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
                   <img
-                    src="4.jpg"
+                    src="images/app-screen.png"
                     class="img-fluid mx-auto d-block"
                     alt="img4"
                   />
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
                   <img
-                    src="5.jpg"
+                    src="images/app-screen.png"
                     class="img-fluid mx-auto d-block"
                     alt="img5"
                   />
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
                   <img
-                    src="6.jpg"
+                    src="images/app-screen.png"
                     class="img-fluid mx-auto d-block"
                     alt="img6"
-                  />
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                  <img
-                    src="7.jpg"
-                    class="img-fluid mx-auto d-block"
-                    alt="img7"
-                  />
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                  <img
-                    src="8.jpg"
-                    class="img-fluid mx-auto d-block"
-                    alt="img8"
                   />
                 </div>
               </div>
@@ -256,12 +253,50 @@
       </div>
     </main>
     <div class="footer-cover"></div>
-    <footer class="footer d-flex-and-center"><h1>hh</h1></footer>
+    <footer class="footer d-flex-and-center"><h1>hh</h1>
+<form method="post">
 
-    <script src="jquery.js"></script>
-    <script src="script.js"></script>
-    <script src="/home/definebell/Downloads/Web Development/Bootstrap-installation/cdnfiles/jquery-3.4.1.slim.min.js"></script>
-    <script src="/home/definebell/Downloads/Web Development/Bootstrap-installation/cdnfiles/popper.min.js"></script>
-    <script src="/home/definebell/Downloads/Web Development/Bootstrap-installation/cdnfiles/bootstrap.min.js"></script>
+			<input type="email" name="useremail" placeholder="Your E-mail please" class="email-box" maxlength="60" id="email_data">
+			<span class="email-message" id="form_response"></span>
+			<button class="submit-button" type="button" id="email_submit">Send</button>
+		</form>
+</footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+<script type="text/javascript">
+	
+$(document).ready(function (){
+
+	$("#email_submit").click(function (){
+
+		var $email_data_var;
+		$email_data_var = $("#email_data").val();
+		if($email_data_var == ''){
+			$("#email_msg").html("Please Enter a Email Address");
+		}
+		else{
+
+			$.ajax({
+
+				type:'POST',
+				url:"ajax/email-submit.php",
+				data:{email_data_values : $email_data_var},
+				success:function(response){
+					$("#form_response").html(response);
+				}
+
+			});
+
+		}
+
+	});
+
+});
+
+</script>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
 
 html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   background: #f6fbff;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .hero-bg {
-  background-image: url(hero-img.png);
+  background-image: url(../images/hero-img.png);
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -56,9 +56,16 @@ h1 {
   font-weight: bold;
 }
 
-.hero p {
-  font-family: "Rounded Mplus 1c";
+p {
+  font-family: 'Rounded Mplus 1c';
   font-weight: normal;
+  color: #24272f;
+  font-size: 18px;
+  line-height: 27px;
+  color: #24272f;
+}
+
+.hero p {
   /* font-size: 24px; */
   max-width: 408px;
 }
@@ -88,7 +95,6 @@ h1 {
     font-size: 1.2em;
   }
 }
-
 
 .mouse {
   max-width: 2.5rem;
@@ -166,13 +172,13 @@ section {
   background-color: #f6fbff;
 }
 
-.how-it-works h2 {
+h2 {
   font-size: 48px;
   color: #333a4f;
   font-weight: 900;
 }
 
-.how-it-works p {
+p {
   color: #24272f;
   font-size: 18px;
 }
@@ -185,10 +191,6 @@ section {
   height: 100%;
 }
 
-
-
-
-
 .bg-change {
   transition: background-color 1s ease;
 }
@@ -196,6 +198,7 @@ section {
 /* panel styles */
 .panel {
   min-height: 100vh;
+  outline: 10px solid red;
 }
 
 .color-pink {
@@ -217,10 +220,10 @@ section {
 }
 
 .footer {
-    z-index: 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: red;
+  z-index: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: red;
 }
