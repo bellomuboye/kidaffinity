@@ -18,7 +18,7 @@ if(isset($_POST['email_data_values'])){
 
 			$insert = $email_access->insert("email",$email_field);
 			if($insert){
-				echo "Thank You For Subscribe";
+				echo "Received! See you soon!";
 			}
 			else{
 				echo "Not Subscribed";
@@ -27,7 +27,7 @@ if(isset($_POST['email_data_values'])){
 
 		}
 		else{
-			echo "You Have Already Subscribed";
+			echo "We already have this mail";
 			return false;
 		}
 
