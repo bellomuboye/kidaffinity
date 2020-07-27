@@ -3,9 +3,9 @@
 class Config{
 
 	private $DBHOST = 'localhost';
-	private $DBUSER = 'root';
-	private $DBPASS = 'TheBells2001';
-	private $DBNAME = 'kanotification';
+	private $DBUSER = 'id14358626_root';
+	private $DBPASS = '2001SirenforLife@';
+	private $DBNAME = 'id14358626_kanotification';
 	public $con;
 
 	public function __construct(){
